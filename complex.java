@@ -1,23 +1,23 @@
-class complex
+public class Complex
 {
-	int real,img;
-	complex(int r,int i)
+	int real,imaginary;	
+	Complex (int r,int i)
 	{
-		this.real=r;
-		this.img=i;
+		real=r;
+		imaginary=i;
 	}
-	static complex sum(complex c1,complex c2)
+	static Complex sum(Complex c1,Complex c2)
 	{
-		complex tmp=new complex(0,0);
-		tmp.real=c1.real+c2.real;
-		tmp.img=c1.img+c2.img;
-		return tmp;
+		Complex result=new Complex(0,0);
+		result.real=c1.real+c2.real;
+		result.imaginary=c1.imaginary+c2.imaginary;
+		return result;
 	}
-	public static void main(String []args)
+	public static void main(String[] args)
 	{
-		complex ob1=new complex(1,2);
-		complex ob2=new complex(3,4);
-		complex tmp=sum(ob1,ob2);
-		System.out.println("Sum="+tmp.real+"+"+tmp.img+"i");
-	}
-}	
+		Complex n1=new Complex(2,4);
+		Complex n2=new Complex(1,1);
+		Complex result=sum(n1,n2);
+		System.out.println("SUM OF COMPLEX NUMBER =" + result.real + " " + "+" + " " + "i" + result.imaginary);
+	}	
+}
