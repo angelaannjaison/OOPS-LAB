@@ -1,24 +1,25 @@
-class Employee
+public class Employee
 {
+	int employeeid;
 	String name;
-	int sallary,empid;
-	void read(int id,String n,int s)
+	int monthlysalary;
+	void read(int id,String nm,int ms)
 	{
-		empid=id;
-		name=n;
-		sallary=s;
+		employeeid=id;
+		name=nm;
+		monthlysalary=ms;
 	}
-	void dis()
+	void disp()
 	{
-		System.out.println(empid+" "+name+" "+12*sallary);
-	}
-	public static void main(String arg[])
+		System.out.println("ID :"+employeeid+" , "+"NAME :"+name+" , "+"YEARLY SALARY :"+monthlysalary*12);
+	}	
+	public static void main(String[] args)
 	{
-		Employee ob1=new Employee();
-		ob1.read(1,"LILLY",1000);
-		ob1.dis();
-		Employee ob2=new Employee();
-		ob2.read(2,"POTTER",2000);
-		ob2.dis();
+		Employee p1=new Employee();
+		p1.read(111,"LILLY",58000);
+		p1.disp();
+		Employee p2=new Employee();
+		p2.read(222,"POTTER",100000);
+		p2.disp();
 	}
 }
