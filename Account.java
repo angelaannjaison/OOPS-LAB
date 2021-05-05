@@ -1,47 +1,46 @@
-class Account
+public class Account
 {
-	int acno;
-	int balance=10000;
-	String name,actype;
-	void read(int no,String nm,String type)
+	int accnum,balance=1000;
+	String accname,acctype;
+	void read(int n,String nm,String t,int b)
 	{
-		acno=no;
-		name=nm;
-		actype=type;
+		accnum=n;
+		accname=nm;
+		acctype=t;
+		balance=b;
 	}
 	void credit(int a)
 	{
 		balance=balance+a;
-		System.out.println("after credict= "+balance);
+		System.out.println("AFTER CREDIT  : "+balance);
 	}
 	void debit(int a)
 	{
 		if(balance-a<1000)
 		{
-			System.out.println("sorry!! insufficient balance");
+			System.out.println("INSUFFICIENT BALANCE");
 		}
 		else
 		{
 			balance=balance-a;
-			System.out.println("After debit= "+balance);
+			System.out.println("AFTER DEBIT :"+balance);
 		}
 	}
-	
-	void dis()
+	void disp()
 	{
-		System.out.println("---------------Account details--------------");
-		System.out.println(acno+" "+name+" "+actype+" "+balance);
-		System.out.println("-------------------");
+		System.out.println("ACCOUNT NUMBER :"+accnum+" "+"ACCOUNT NAME :"+accname+" "+"ACCOUNT TYPE :"+acctype+" "+"BALANCE :"+balance);
 	}
-	public static void main(String arg[])
+	public static void main(String[] args)
 	{
-		Account ob1=new Account();
-		ob1.read(1000000,"ANJU","current");
-		ob1.credit(1000);
-		ob1.dis();
-		Account ob2=new Account();
-		ob2.read(4000,"JULIE","savings");
-		ob2.debit(5000);
-		ob2.dis();
+		Account p1=new Account();
+		p1.read(111,"ANU","SAVINGS",100000);
+		p1.credit(50000);
+		p1.debit(5000);
+		p1.disp();
+		Account p2=new Account();
+		p2.read(222,"LILLY","CURRENT",25000);
+		p2.credit(5000);
+		p2.debit(4000);
+		p2.disp(); 	
 	}
 }
