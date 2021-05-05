@@ -1,6 +1,6 @@
 public class Account
 {
-	int accnum,balance=1000;
+	int accnum,balance=0;
 	String accname,acctype;
 	void read(int n,String nm,String t,int b)
 	{
