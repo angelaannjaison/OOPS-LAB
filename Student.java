@@ -1,40 +1,43 @@
-class Student
+public class Student
 {
+	int rollno;
 	String name;
-	int rollno,mark1,mark2,mark3;
-	void read(int r,String n,int m1,int m2,int m3)
+	int mark1,mark2,mark3;
+	void read(int rn,String nm,int m1,int m2,int m3)
 	{
-		rollno=r;
-		name=n;
+		rollno=rn;
+		name=nm;
 		mark1=m1;
 		mark2=m2;
 		mark3=m3;
 	}
-	void dis()
+	void disp()
 	{
 		int sum=mark1+mark2+mark3;
-		System.out.println("sum of mark of "+name+" is"+" "+sum);
+		System.out.println(name+"  :  "+"Sum of marks of three subjects ="+sum);
 	}
-	public static void main(String arg[])
+	public static void main(String[] args)
 	{
-		Student ob1=new Student();
-		ob1.read(1,"Anu",10,20,30);
-		ob1.dis();
-		int s1=ob1.mark1+ob1.mark2+ob1.mark3;
-		Student ob2=new Student();
-		ob2.read(2,"JOE",50,80,30);
-		ob2.dis();
-		int s2=ob2.mark1+ob2.mark2+ob2.mark3;
-		Student ob3=new Student();
-		ob3.read(3,"HANNAH",10,10,30);
-		ob3.dis();
-		int s3=ob3.mark1+ob3.mark2+ob3.mark3;
+		Student p1=new Student();
+		p1.read(1,"Poppy",80,75,95);
+		p1.disp();
+		int s1=p1.mark1+p1.mark2+p1.mark3;
+
+		Student p2=new Student();
+		p2.read(2,"Kelly",90,95,98);
+		p2.disp();
+		int s2=p2.mark1+p2.mark2+p2.mark3;
+
+		Student p3=new Student();
+		p3.read(3,"Jake",50,95,68);
+		p3.disp();
+		int s3=p3.mark1+p3.mark2+p3.mark3;
+
 		if(s1>s2 && s1>s3)
-			System.out.println(ob1.name+" "+" has highscore");
-		else if(s2>s3)
-			System.out.println(ob2.name+" "+" has highscore");
+			System.out.println("Student who secured highest score is :"+p1.name);
+		else if(s2>s1 && s2>s3)
+			System.out.println("Student who secured highest score is :"+p2.name);
 		else
-			System.out.println(ob3.name+" "+" has highscore");
-			
+			System.out.println("Student who secured highest score is :"+p3.name);
 	}
 }
