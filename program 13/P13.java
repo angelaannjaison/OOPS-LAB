@@ -49,7 +49,7 @@ public class P13 implements Graphics.Square,Graphics.Rectangle
 					System.out.println("Area of circle ="+circ.circ_area(r));
 					break;
 				case 5:
-					System.out.println("Exit");	
+					System.out.println("-------------------Exit----------------------");	
 
 			}
 		}while(c!=5);
