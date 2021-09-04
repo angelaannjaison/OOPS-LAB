@@ -29,17 +29,17 @@ class Program_9
 			ch=Integer.parseInt(sc.nextLine());
 			switch(ch)
 			{
-				case 1:System.out.println("Enter length:");
+				case 1:System.out.println("Enter length =");
 				       l=Float.parseFloat(sc.nextLine());
-				       System.out.println("Enter breadth:");
+				       System.out.println("Enter breadth =");
 				       b=Float.parseFloat(sc.nextLine());
 				       sh.area(l,b);
 				       break;
-				case 2:System.out.println("Enter radius:");
+				case 2:System.out.println("Enter radius =");
 					   r=Float.parseFloat(sc.nextLine());
 					   sh.area(r);
 					   break;
-			    case 3:System.out.println("Enter side:");
+			    case 3:System.out.println("Enter side =");
 					   s=Integer.parseInt(sc.nextLine());
 					   sh.area(s);
 					   break;
